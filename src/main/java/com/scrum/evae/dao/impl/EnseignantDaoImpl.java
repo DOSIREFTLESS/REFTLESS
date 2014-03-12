@@ -3,12 +3,13 @@ package com.scrum.evae.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
 import com.scrum.evae.dao.EnseignantDAO;
 import com.scrum.evae.dao.database.Database;
 import com.scrum.evae.metier.model.Enseignant;
 
-public class EnseignantDaoImpl implements EnseignantDAO {
-
+public class EnseignantDaoImpl extends JdbcDaoSupport implements EnseignantDAO {
 	private Database db;
 	
 	public EnseignantDaoImpl() {

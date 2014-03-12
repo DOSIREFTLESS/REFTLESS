@@ -14,6 +14,8 @@ public class EnseignantMetierImpl implements  EnseignantMetier{
 		this.enseignantDAO = enseignantDAO;
 	}
 
+	
+	
 	@Override
 	public List<Enseignant> listEnseignant() {		
 		return enseignantDAO.getEnseignants();

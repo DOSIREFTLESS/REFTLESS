@@ -34,9 +34,31 @@ public class RubriqueEvaluation implements Serializable {
         this.idEvaluation = idEvaluation;
         this.idRubrique = idRubrique;
         this.ordre = ordre;
+        this.idRubriqueEvaluation=3;
+		this.designation="";
     }
 
-    public int getIdRubriqueEvaluation() {
+    
+    public RubriqueEvaluation(int idEvaluation, int idRubrique) {
+		super();
+		this.idEvaluation = idEvaluation;
+		this.idRubrique = idRubrique;
+		this.idRubriqueEvaluation=3;
+		this.designation="";
+		
+	}
+
+	public RubriqueEvaluation(int idRubriqueEvaluation, int idEvaluation,
+			int idRubrique, int ordre, String designation) {
+		super();
+		this.idRubriqueEvaluation = idRubriqueEvaluation;
+		this.idEvaluation = idEvaluation;
+		this.idRubrique = idRubrique;
+		this.ordre = ordre;
+		this.designation = designation;
+	}
+
+	public int getIdRubriqueEvaluation() {
         return idRubriqueEvaluation;
     }
 

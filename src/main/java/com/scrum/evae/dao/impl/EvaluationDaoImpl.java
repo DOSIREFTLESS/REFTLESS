@@ -6,12 +6,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
 import com.scrum.evae.dao.EvaluationDAO;
 import com.scrum.evae.dao.database.Database;
 import com.scrum.evae.metier.model.Evaluation;
 
-public class EvaluationDaoImpl implements EvaluationDAO {
-private Database db;
+public class EvaluationDaoImpl extends JdbcDaoSupport  implements EvaluationDAO {
+	private Database db;
 	
 	public EvaluationDaoImpl() {
 		
@@ -31,12 +33,12 @@ private Database db;
 	@Override
 	public List<Evaluation> getEvalsEnseigant(int numEnseignant) {
 		List<Evaluation> evaluations = new ArrayList<Evaluation>();
-		String data[][] = db.select2("EVALUATION","no_enseignant",""+numEnseignant+"");
+		String data[][] = db.select2("EVALUATION","no_enseignant", numEnseignant);
 		for (int i = 0; i < data.length; i++) {
 			Evaluation evaluation=new Evaluation();
 			evaluation.setNoEvaluation(Integer.parseInt(data[i][0]));
 			evaluation.setNoEnseignant(Integer.parseInt(data[i][1]));
-			evaluation.setCodeFormation(Integer.parseInt(data[i][2]));
+			evaluation.setCodeFormation(data[i][2]);
 			evaluation.setAnneePro(data[i][3]);
 			evaluation.setCodeUe(data[i][4]);
 			evaluation.setCodeEc(data[i][5]);

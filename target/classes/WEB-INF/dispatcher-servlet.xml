@@ -5,8 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	
-	
+		
 	<bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
         <property name="prefix">
@@ -17,11 +16,11 @@
         </property>
     </bean>
 
-    <bean name="/" class="com.scrum.evae.controller.IndexController" >
+    <bean name="/index.html" class="com.scrum.evae.controller.IndexController" >
+    	<property name="EnseignantMetier" ref="EnseignantMetier"/>
     </bean>
     
-    <bean name="/evaluation" class="com.scrum.evae.controller.EvaluationController" >
+	<bean name="/listEvaluation.html" class="com.scrum.evae.controller.ListEvaluationController" >
+   		<property name="EvaluationMetier" ref="EvaluationMetier"/>
     </bean>
-    
-
 </beans>

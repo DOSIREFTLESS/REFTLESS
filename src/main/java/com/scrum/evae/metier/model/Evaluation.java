@@ -8,7 +8,7 @@ public class Evaluation implements Serializable {
    
     private int idEvaluation;
     private int noEnseignant;
-    private int codeFormation;
+    private String codeFormation;
     private String anneePro;
     private String codeUe;
     private String codeEc;
@@ -26,7 +26,7 @@ public class Evaluation implements Serializable {
         this.idEvaluation = idEvaluation;
     }
 
-    public Evaluation(Integer idEvaluation, int noEnseignant, int codeFormation, String anneePro, String codeUe, int noEvaluation, String etat, Date debutReponse, Date finReponse) {
+    public Evaluation(Integer idEvaluation, int noEnseignant, String codeFormation, String anneePro, String codeUe, int noEvaluation, String etat, Date debutReponse, Date finReponse) {
         this.idEvaluation = idEvaluation;
         this.noEnseignant = noEnseignant;
         this.codeFormation = codeFormation;
@@ -54,11 +54,11 @@ public class Evaluation implements Serializable {
         this.noEnseignant = noEnseignant;
     }
 
-    public int getCodeFormation() {
+    public String getCodeFormation() {
         return codeFormation;
     }
 
-    public void setCodeFormation(int codeFormation) {
+    public void setCodeFormation(String codeFormation) {
         this.codeFormation = codeFormation;
     }
 

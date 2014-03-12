@@ -34,17 +34,22 @@ public class IndexController extends AbstractController {
 		
 		List<Enseignant> listEnseignant = enseignantMetier.listEnseignant();
 		
-//		List<Enseignant> listEnseignant = new ArrayList<Enseignant>();		
-//		Enseignant ens = new Enseignant();
-//		ens.setNom("BIANE");
-//		ens.setPrenom("Med");
-//		listEnseignant.add(ens); 
-//		
 //		Map<String, Object> attributes = new HashMap<String, Object>();
 //		attributes.put("enseignants", listEnseignant);		
 //		attributes.put("message", "L'action sur les enseignants a bien �t� trait�e");
 //		
-		
+//		List<Enseignant> listEnseignant = new ArrayList<Enseignant>();		
+//		Enseignant ens = new Enseignant();
+//		ens.setNoEnseignant(7);
+//		ens.setNom("BIANE");
+//		ens.setPrenom("Med");
+//		listEnseignant.add(ens);
+//		
+//		Enseignant ens1 = new Enseignant();
+//		ens1.setNoEnseignant(3);
+//		ens1.setNom("LERROU");
+//		ens1.setPrenom("Pierre");
+//		listEnseignant.add(ens1);
 		
 		req.setAttribute("listEnseignant", listEnseignant);	
 

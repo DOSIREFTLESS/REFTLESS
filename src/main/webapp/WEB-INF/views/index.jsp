@@ -26,7 +26,7 @@
   </head>
   	
   <body>
-	<form action="<%=request.getContextPath()%>/evaluation" method="post">
+	<form action="<%=request.getContextPath()%>/listEvaluation.html" method="post">
     <div id="wrapper">
 
       <!-- Sidebar -->
@@ -53,7 +53,7 @@
             <ol class="breadcrumb">             
             </ol>
             <div class="alert alert-success alert-dismissable">
-          <select id="disabledSelect" class="form-control">
+          <select name="listEnseigant" class="form-control">
           	
           	<%
     		ArrayList<Enseignant> listEnseignant = new ArrayList<Enseignant>();
